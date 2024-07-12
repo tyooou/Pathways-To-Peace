@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="icon" href="./favicon.svg" type="image/x-icon" />
+    <script src="./main.js"></script>
+    <title>Cybersecurity</title>
+  </head>
+  <body>
+    <i onclick="darkMode()"
+      ><img
+        id="darkModeIconToggle"
+        class="darkModeIcon"
+        src="./icons/darkmode_icon.png"
+    /></i>
+
+    <i
+      onclick="transitionToPage('./topic-1-scene-1.html')"
+      id="right-direction"
+      class="direction"
+      ><img src="./icons/right.png" class="btn-icon"
+    /></i>
+    <i
+      onclick="transitionToPage('./topic-1-scene-3.html')"
+      id="left-direction"
+      class="direction"
+      ><img src="./icons/left.png" class="btn-icon"
+    /></i>
+
+    <div id="project-container">
+    </div>
+  </body>
+</html>

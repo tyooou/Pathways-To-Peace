@@ -39,3 +39,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
   document.querySelector("body").style.opacity = 1;
 });
 
+function showEndButton() {
+  setTimeout(function() {
+    document.querySelector('.end-button').style.opacity = 1;
+  }, 6000); // 8000 milliseconds = 8 seconds
+}

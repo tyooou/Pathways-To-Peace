@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta nam="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./main.css" />
+    <script src="./main.js"></script>
+    <script></script>
+    <title>Hackathon 2024</title>
+  </head>
+
+  <body>
+    <i onclick="darkMode()"
+      ><img
+        id="darkModeIconToggle"
+        class="darkModeIcon"
+        src="./icons/darkmode_icon.png"
+    /></i>
+
+    <div class="mainBody ending">
+        <h1 class="mainText" style="position: relative; top: 50px">Empower Humanity</h1>
+        <div class="content"></div>
+        <script type="text/javascript" src="./TagCloud.min.js"></script>
+        <script>
+            var texts = [
+                '3D', 'TagCloud', 'JavaScript',
+                'CSS3', 'Animation', 'Interactive',
+                'Mouse', 'Rolling', 'Sphere',
+                '6KB', 'v2.x',
+                '3D', 'TagCloud', 'JavaScript',
+                'CSS3', 'Animation', 'Interactive',
+                'Mouse', 'Rolling', 'Sphere',
+                '6KB', 'v2.x',
+                '3D', 'TagCloud', 'JavaScript',
+                'CSS3', 'Animation', 'Interactive',
+                'Mouse', 'Rolling', 'Sphere',
+                '6KB', 'v2.x',
+            ];
+            var tc = TagCloud('.content', texts);
+            console.log(tc);
+        </script>
+    </div>
+  </body>
+</html>

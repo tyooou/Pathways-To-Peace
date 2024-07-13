@@ -42,7 +42,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
 function showEndButton() {
   setTimeout(function() {
     document.querySelector('.end-button').style.opacity = 1;
-  }, 6000); // 8000 milliseconds = 8 seconds
+  }, 6000);
+}
+
+function showResultsButton() {
+  setTimeout(function() {
+    document.querySelector('.results-button').style.opacity = 1;
+  }, 4000); 
 }
 
 
@@ -72,18 +78,42 @@ function simulateLoading(duration) {
 function showCutscene() {
   setTimeout(function() {
     document.querySelector('.second').style.opacity = 1;
-  }, 3000);
+  }, 2000);
   setTimeout(function() {
     document.querySelector('.third').style.opacity = 1;
-  }, 6000);
+  }, 4000);
   setTimeout(function() {
     document.querySelector('.fourth').style.opacity = 1;
-  }, 10000);
+  }, 7000);
   setTimeout(function() {
     document.querySelector('.cutscene-button').style.opacity = 1;
-  }, 14000);
+  }, 10000);
 }
 
 function addToInventory(key, item) {
   localStorage.setItem(key, item);
+}
+
+function addToChoices(key, value) {
+  localStorage.setItem(key, value);
+}
+
+function calculateResult() {
+  let resultValue = 0;
+  resultValue = localStorage.getItem('choice1') + localStorage.getItem('choice2') +
+  localStorage.getItem('choice3') + localStorage.getItem('choice4') +
+  localStorage.getItem('choice5') + localStorage.getItem('choice6') +
+  localStorage.getItem('choice7') + localStorage.getItem('choice8');
+
+  if (resultValue == 0) {
+      transitionToPage('./character1.html');
+  } else if (resultValue > 0 && resultValue <= 25) {
+      transitionToPage('./character1.html');
+  } else if (resultValue > 25 && resultValue <= 50) {
+      transitionToPage('./character1.html');
+  } else if (resultValue > 50 && resultValue <= 75) {
+      transitionToPage('./character1.html');
+  } else if (resultValue > 75) {
+      transitionToPage('./character1.html');
+  }
 }

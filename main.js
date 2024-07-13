@@ -44,3 +44,48 @@ function showEndButton() {
     document.querySelector('.end-button').style.opacity = 1;
   }, 6000); // 8000 milliseconds = 8 seconds
 }
+
+
+function simulateLoading(duration) {
+  const progressBar = document.querySelector('.progress');
+  let start = null;
+  const easeInOutQuad = (t) => t<.5 ? 2*t*t : -1+(4-2*t)*t;
+  
+  function step(timestamp) {
+    if (!start) start = timestamp;
+    const progress = (timestamp - start) / duration;
+    const easedProgress = easeInOutQuad(progress);
+    progressBar.style.width = (easedProgress * 100) + '%';
+
+    if (progress < 0.87) {
+      requestAnimationFrame(step);
+    } else {
+      setTimeout(() => {
+        window.location.href = 'home.html';
+      }, 1000); // Redirect 2 seconds after loading completes
+    }
+  }
+
+  requestAnimationFrame(step);
+}
+
+function showEndButton() {
+  setTimeout(function() {
+    document.querySelector('.').style.opacity = 1;
+  }, 6000); // 8000 milliseconds = 8 seconds
+}
+
+function showCutscene() {
+  setTimeout(function() {
+    document.querySelector('.second').style.opacity = 1;
+  }, 4000);
+  setTimeout(function() {
+    document.querySelector('.third').style.opacity = 1;
+  }, 8000);
+  setTimeout(function() {
+    document.querySelector('.fourth').style.opacity = 1;
+  }, 14000);
+  setTimeout(function() {
+    document.querySelector('.cutscene-button').style.opacity = 1;
+  }, 17000);
+}

@@ -22,3 +22,75 @@ body {
     padding: 10px;
     min-height: 50px;
 }
+
+.container {
+    display: inline-flex;
+    justify-content: center;
+  }
+  
+  .container .item {
+    position: relative;
+    background: red;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 70px;
+    height: 70px;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  .object {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background: transparent;
+  }
+  
+  .container .popup {
+    position: absolute;
+    top: 0;
+    font-size: 0.8rem;
+    background: #fff;
+    color: black;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 1s ease-in-out;
+  }
+  
+  .container .popup::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 1s ease-in-out;
+  }
+  
+  .container .item:hover .popup {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .container .item:hover span,
+  .container .item:hover .popup {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }

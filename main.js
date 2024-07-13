@@ -177,12 +177,28 @@ function showChoices(key) {
 
 function getCollected() {
   let elements = document.querySelectorAll(".inventory-item");
+  let itemsList = ["coins-item", "clothing-item", "mirror-item", "food-item", "wheel-item", "shoes-item", "laptop-item", "doll-item"];
+  let counter = 0;
   for (let i = 0; i < elements.length; i++) {
     let itemKey = `item${i + 1}`;
+    let item = document.getElementById(itemsList[i]);
     if (Number(localStorage.getItem(itemKey)) === 1) {
       elements[i].style.opacity = 1;
+      if (item) {
+        item.style.opacity = 0;
+      }
+      counter++;
     } else {
       elements[i].style.opacity = 0.1; // optional: to show that item is not collected
+      if (item) {
+        item.style.opacity = 1;
+      }
     }
+  }
+
+  if (counter == 8) {
+    setTimeout(function() {
+      transitionToPage("./ending.html")
+    }, 2000);
   }
 }

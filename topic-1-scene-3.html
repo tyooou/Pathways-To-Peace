@@ -29,9 +29,10 @@
       ><img src="./icons/left.png" class="btn-icon"
     /></i>
 
-    <div id="project-container">
-      <div onclick="showChoices(5)" class="animated">See choices</div>
-      <div class="scene-count">Scene 1/4</div>
+    <img src="./wheel.png" id="wheel-item" class="finding-items" style="position: absolute; left: 1080px; top: 510px; width: 90px; opacity: 0.7; cursor: pointer;" onclick="showChoices(5)"/>
+    <img src="./shoes.png" id="shoes-item" class="finding-items" style="position: absolute; left: 900px; top: 480px; width: 50px; opacity: 0.5; cursor: pointer;" onclick="showChoices(6)"/>
+    <div id="project-container" style="background-image: url(left.jpg);">
+      <div class="scene-count">Scene 3/4</div>
       <div class="inventory-bar">
         <img id="coins-img" src="./coins.png" class="inventory-item"/>
         <img id="clothing-img" src="./clothing.png" class="inventory-item"/>
@@ -39,8 +40,8 @@
         <img id="food-img" src="./food.png" class="inventory-item"/>
         <img id="wheel-img" src="./wheel.png" class="inventory-item"/>
         <img id="shoes-img" src="./shoes.png" class="inventory-item"/>
-        <img id="doll-img" src="./doll.png" class="inventory-item"/>
         <img id="laptop-img" src="./laptop.png" class="inventory-item"/>
+        <img id="doll-img" src="./doll.png" class="inventory-item"/>
       </div>
     </div>
     <script>getCollected()</script>

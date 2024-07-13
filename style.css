@@ -94,3 +94,9 @@ body {
   .container .item:hover .popup {
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
   }
+
+  .finding-items {
+    width: 10px;
+    height: 10px;
+    display: none;
+  }

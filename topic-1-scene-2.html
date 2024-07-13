@@ -29,9 +29,10 @@
       ><img src="./icons/left.png" class="btn-icon"
     /></i>
 
-    <div id="project-container" style="background-image: url(background2.jpg);">
-      <div onclick="showChoices(3)" class="animated">See choices</div>
-      <div class="scene-count">Scene 1/4</div>
+    <img src="./mirror.png" id="mirror-item" class="finding-items" style="position: absolute; left: 1180px; top: 520px; width: 50px; cursor: pointer;" onclick="showChoices(3)"/>
+    <img src="./food.png" id="food-item" class="finding-items" style="position: absolute; left: 850px; top: 550px; width: 50px; opacity: 0.8; cursor: pointer;" onclick="showChoices(4)"/>
+    <div id="project-container" style="background-image: url(back.jpg);">
+      <div class="scene-count">Scene 2/4</div>
       <div class="inventory-bar">
         <img id="coins-img" src="./coins.png" class="inventory-item"/>
         <img id="clothing-img" src="./clothing.png" class="inventory-item"/>
@@ -39,8 +40,8 @@
         <img id="food-img" src="./food.png" class="inventory-item"/>
         <img id="wheel-img" src="./wheel.png" class="inventory-item"/>
         <img id="shoes-img" src="./shoes.png" class="inventory-item"/>
-        <img id="doll-img" src="./doll.png" class="inventory-item"/>
         <img id="laptop-img" src="./laptop.png" class="inventory-item"/>
+        <img id="doll-img" src="./doll.png" class="inventory-item"/>
       </div>
     </div>
 
@@ -53,7 +54,7 @@
         <div onclick="addToChoices('choice1', 1)" class="animated choice-button choice-button-1">Try to fix them myself</div>
         <div onclick="addToChoices('choice1', 3)" class="animated choice-button choice-button-2">Donate the jacket to a charity.</div>
       </div>
-
+ 
       <div class="food choice-modal">
         <div class="modal-title">
           You have excess non-perishable food at home. What can you do with them?

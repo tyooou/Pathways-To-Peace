@@ -29,31 +29,38 @@
       ><img src="./icons/left.png" class="btn-icon"
     /></i>
 
-    <div id="project-container">
-      <a onclick="transitionToPage('./ending.html')"><div class="animated inventory"><img src="./icons/inventory.png"/>End</div></a>
+    <img src="./laptop.png" id="laptop-item" class="finding-items" style="position: absolute; left: 280px; top: 40px; width: 70px; opacity: 0.5; cursor: pointer;" onclick="showChoices(7)"/>
+    <img src="./doll.png" id="doll-item" class="finding-items" style="position: absolute; left: 500px; top: 520px; width: 90px; opacity: 0.7; cursor: pointer;" onclick="showChoices(8)"/>
+    <div id="project-container" style="background-image: url(right.jpg);">
       <div class="scene-count">Scene 4/4</div>
+      <div class="inventory-bar">
+        <img id="coins-img" src="./coins.png" class="inventory-item"/>
+        <img id="clothing-img" src="./clothing.png" class="inventory-item"/>
+        <img id="mirror-img" src="./mirror.png" class="inventory-item"/>
+        <img id="food-img" src="./food.png" class="inventory-item"/>
+        <img id="wheel-img" src="./wheel.png" class="inventory-item"/>
+        <img id="shoes-img" src="./shoes.png" class="inventory-item"/>
+        <img id="laptop-img" src="./laptop.png" class="inventory-item"/>
+        <img id="doll-img" src="./doll.png" class="inventory-item"/>
+      </div>
     </div>
+    <script>getCollected()</script>
 
-    <div class="container">
-      <div class="item">
-        <span onclick="hide(this)" class="object"> </span>
-        <span class="popup">Some text in the Popup 1..</span>
+    <div class="laptop choice-modal">
+      <div class="modal-title">
+        How can you help support transportation in rural areas?
       </div>
-      <div class="item" style="position: absolute; left: 200px;">
-        <span onclick="hide(this)" class="object"> </span>
-        <span class="popup">Some text in the Popup 2..</span>
+        <div onclick="addToChoices('choice1', 1)" class="animated choice-button choice-button-1">Organize charity walk to buy bikes.</div>
+        <div onclick="addToChoices('choice1', 3)" class="animated choice-button choice-button-2">Repost Instagram post to raise awareness.</div>
+        <div onclick="addToChoices('choice1', 3)" class="animated choice-button choice-button-2">Collect donations without tracking funds.</div>
       </div>
-      <div class="item" style="position: absolute; left: 400px">
-        <span onclick="hide(this)" class="object"> </span>
-        <span class="popup">Some text in the Popup 3..</span>
-      </div>
-    </div>
-    
-    <script>
-      function hide(clickedElement) {
-        var item = clickedElement.closest('.item');
-        item.style.display = 'none';
-      }
-    </script>
+
+      <div class="doll choice-modal">
+        <div class="modal-title">
+          How can you help provide clothing and footwear that is suitable for less fortunate children to use?
+        </div>
+          <div onclick="addToChoices('choice1', 1)" class="animated choice-button choice-button-1">Cook a storm with food items.</div>
+          <div onclick="addToChoices('choice1', 3)" class="animated choice-button choice-button-2">Donate non-perishables to local charities.</div>
+        </div>
   </body>
 </html>

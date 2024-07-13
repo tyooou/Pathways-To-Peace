@@ -204,7 +204,7 @@ a {
   height: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size:contain;
   opacity: 100%;
   transition: 0.6s;
 }
@@ -667,4 +667,14 @@ a {
 
 .laptop {
   display: none;
+}
+
+.finding-items {
+  scale: 1;
+  transition: 0.6s;
+}
+
+.finding-items:hover {
+  scale: 1.2;
+  transition: 0.6s;
 }

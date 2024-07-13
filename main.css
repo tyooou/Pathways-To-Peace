@@ -327,7 +327,7 @@ a {
 
 .inventory {
   position: absolute;
-  bottom: 36px;
+  bottom: 16px;
   right: 36px;
   width: 150px;
   font-size: 24px;
@@ -355,6 +355,7 @@ a {
   border-radius: 12px;
   cursor: pointer;
   color: white;
+  background-color: #1c1c1c;
 }
 
 .animated:hover {
@@ -362,7 +363,28 @@ a {
   color: #1c1c1c;
 }
 
-.animated img {
+.home-button {
+  position: absolute;
+  top: 24px;
+  left: 36px;
+  width: 36px;
+  font-size: 24px;
+  padding: 16px;
+  text-align: center;
+}
+
+.home-button img {
+  position: relative;
+  filter: invert(1);
+  transition-duration: 0.3s;
+  width: 24px;
+}
+
+.home-button:hover img {
+  filter: invert(0);
+}
+
+.inventory img {
   position: relative;
   top: 4px;
   filter: invert(1);
@@ -371,7 +393,7 @@ a {
   margin-right: 12px;
 }
 
-.animated:hover img {
+.inventory:hover img {
   filter: invert(0);
 }
 

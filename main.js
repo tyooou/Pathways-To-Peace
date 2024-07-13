@@ -96,15 +96,19 @@ function addToInventory(key, item) {
 
 function addToChoices(key, value) {
   localStorage.setItem(key, value);
+  let choices = document.querySelectorAll(".choice-modal");
+  for (var i = 0; i < choices.length; i++) {
+    choices[i].style.display = "none";
+  }
 }
 
 function calculateResult() {
   let resultValue = 0;
-  resultValue = localStorage.getItem('choice1') + localStorage.getItem('choice2') +
-  localStorage.getItem('choice3') + localStorage.getItem('choice4') +
-  localStorage.getItem('choice5') + localStorage.getItem('choice6') +
-  localStorage.getItem('choice7') + localStorage.getItem('choice8');
-
+  resultValue = Number(localStorage.getItem('choice1')) + Number(localStorage.getItem('choice2')) +
+  Number(localStorage.getItem('choice3')) + Number(localStorage.getItem('choice4')) +
+  Number(localStorage.getItem('choice5')) + Number(localStorage.getItem('choice6')) +
+  Number(localStorage.getItem('choice7')) + Number(localStorage.getItem('choice8'));
+  console.log(resultValue)
   if (resultValue == 0) {
       transitionToPage('./character1.html');
   } else if (resultValue > 0 && resultValue <= 25) {
@@ -115,5 +119,48 @@ function calculateResult() {
       transitionToPage('./character1.html');
   } else if (resultValue > 75) {
       transitionToPage('./character1.html');
+  } else {
+    transitionToPage('./character1.html');
+  }
+}
+
+function downloadImg() {
+    html2canvas(document.getElementById('results-container')).then(function(canvas) {
+      // Create a link element
+      let link = document.createElement('a');
+      // Set the download attribute with a filename
+      link.download = 'PathwayOfPeaceResults.png';
+      // Convert the canvas to a data URL and set it as the href attribute
+      link.href = canvas.toDataURL();
+      // Append the link to the body (required for Firefox)
+      document.body.appendChild(link);
+      // Trigger a click on the link to download the image
+      link.click();
+      // Remove the link from the document
+      document.body.removeChild(link);
+    });
+  }
+
+function showChoices(key) {
+  let choices = document.querySelectorAll(".choice-modal");
+  if (key == 1) {
+    choices = document.querySelectorAll(".coins");
+  } else if (key == 2) {
+    choices = document.querySelectorAll(".clothing");
+  } else if (key == 3) {
+    choices = document.querySelectorAll(".mirror");
+  } else if (key == 4) {
+    choices = document.querySelectorAll(".food");
+  } else if (key == 5) {
+    choices = document.querySelectorAll(".wheel");
+  } else if (key == 6) {
+    choices = document.querySelectorAll(".shoes");
+  } else if (key == 7) {
+    choices = document.querySelectorAll(".laptop");
+  } else if (key == 8) {
+    choices = document.querySelectorAll(".doll");
+  }
+  for (var i = 0; i < choices.length; i++) {
+    choices[i].style.display = "block";
   }
 }

@@ -29,13 +29,10 @@
       ><img src="./icons/left.png" class="btn-icon"
     /></i>
 
-    <div id="project-container" style="background-image: url(background.jpg);">
-      <div onclick="addToInventory(1, 'item-1')" class="animated">Inventory</div>
+    <div id="project-container">
+      <div onclick="showChoices(1)" class="animated">See choices</div>
       <div class="scene-count">Scene 1/4</div>
       <div class="inventory-bar">
-        <img src="./icons/inventory.png" class="inventory-item"/>
-        <img src="./icons/inventory.png" class="inventory-item"/>
-        <img src="./icons/inventory.png" class="inventory-item"/>
         <img src="./icons/inventory.png" class="inventory-item"/>
         <img src="./icons/inventory.png" class="inventory-item"/>
         <img src="./icons/inventory.png" class="inventory-item"/>
@@ -47,26 +44,14 @@
       </div>
     </div>
 
-    <div class="container">
-      <div class="item">
-        <span onclick="hide(this)" class="object"> </span>
-        <span class="popup">Some text in the Popup 1..</span>
-      </div>
-      <div class="item" style="position: absolute; left: 200px;">
-        <span onclick="hide(this)" class="object"> </span>
-        <span class="popup">Some text in the Popup 2..</span>
-      </div>
-      <div class="item" style="position: absolute; left: 400px">
-        <span onclick="hide(this)" class="object"> </span>
-        <span class="popup">Some text in the Popup 3..</span>
-      </div>
+    <div class="coins choice-modal">
+    <div class="modal-title">
+      After picking up the coins you encounter a homeless person. What do you do?
     </div>
-    
-    <script>
-      function hide(clickedElement) {
-        var item = clickedElement.closest('.item');
-        item.style.display = 'none';
-      }
-    </script>
+      <div onclick="addToChoices('choice1', 1)" class="animated choice-button choice-button-1">Donate it to the homeless person.</div>
+      <div onclick="addToChoices('choice1', 3)" class="animated choice-button choice-button-2">Buy food and give that to the homeless person.</div>
+      <div onclick="addToChoices('choice1', 5)" class="animated choice-button choice-button-3">Keep it to yourself</div>
+    </div>
+  </div>
   </body>
 </html>

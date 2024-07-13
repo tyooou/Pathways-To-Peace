@@ -22,7 +22,7 @@
       <img id="left-hand" src="./left-hand.png"></img>
       <img id="right-hand" src="./right-hand.png"></img>
         <h1 class="mainText" style="position: relative; top: 50px">Empower Humanity</h1>
-        <div class="content"></div>
+        <div class="content" style="z-index: 2;"></div>
         <script type="text/javascript" src="./TagCloud.min.js"></script>
         <script>
             var texts = [
@@ -40,9 +40,8 @@
                 'suport', 'cefnogaeth',
             ];
             var tc = TagCloud('.content', texts);
-            console.log(tc);
         </script>
-        <a onclick="calculateResult()"><div class="animated results-button">View Results</div></a>
+        <a onclick="calculateResult()"><div class="animated results-button"  style="z-index: 10;"> View Results</div></a>
         <script>showResultsButton()</script>
     </div>
   </body>

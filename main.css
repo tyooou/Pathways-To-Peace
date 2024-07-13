@@ -577,6 +577,7 @@ a {
   height: 600px;
   width: 600px;
   border: 1px solid white;
+  background-color: #1c1c1c;
   border-radius: 16px;
 }
 
@@ -590,4 +591,52 @@ a {
   text-align: center;
   opacity: 0;
   transition: opacity 0.6s;
+}
+
+.choice-modal {
+  position: absolute;
+  top: 300px;
+  height: 250px;
+  width: 800px;
+  left: calc(50% - 400px);
+  border: 1px solid white;
+  background-color: #1c1c1c;
+  border-radius: 16px;
+  z-index: 10;
+  box-shadow: 0 200px 400px rgba(0, 0, 0, 0.5); /* Increased values for a more obvious shadow */
+}
+
+.choice-button-1 {
+  left: calc(50% - 350px);
+}
+
+.choice-button-2 {
+  left: calc(50% - 100px);
+}
+
+.choice-button-3 {
+  left: calc(50% + 150px);
+}
+
+.modal-text {
+  padding: 16px;
+}
+
+.modal-title {
+  text-align: center;
+  padding: 16px;
+  font-size: 24px;
+}
+
+.choice-button {
+  position: absolute;
+  bottom: 40px;
+  width: 180px;
+  font-size: 20px;
+  padding: 14px;
+  text-align: center;
+}
+
+.coins {
+  display: none;
 }

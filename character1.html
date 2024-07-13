@@ -17,13 +17,14 @@
         src="./icons/darkmode_icon.png"
     /></i>
 
-    <div class="mainBody">
-        <div class="results-container">
-            
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <div id="mainBody" class="mainBody">
+        <div id="results-container" class="results-container">
+          
         </div>
     </div>
-    <a onclick="transitionToPage('./home.html')"><div class="animated share-results">Share Results</div></a>
-    <a onclick="transitionToPage('./home.html')"><div class="animated end-button">Replay</div></a>
+    <a onclick="downloadImg()"><div id="share-results" class="animated share-results">Share Results</div></a>
+    <a onclick="transitionToPage('./home.html')"><div class="animated end-button" >Replay</div></a>
     <script>showEndButton()</script>
   </body>
 </html>

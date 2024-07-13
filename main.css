@@ -3,6 +3,7 @@ body {
   opacity: 0;
   transition: 0.3s;
   font-family: defaultFont;
+  overflow: hidden;
 }
 
 @font-face {
@@ -463,4 +464,83 @@ a {
   left: calc(50% - 122px);
   opacity: 0;
   transition-duration: 0.6s;
+}
+
+#left-hand {
+  position: absolute;
+  color: #4e4e4e;
+  right: 40%;
+  top: -100%;
+  scale: 1;
+  overflow: hidden;
+  opacity: 0.1;
+  -webkit-animation: breathing 8s ease-out infinite normal;
+  animation: breathing 8s ease-out infinite normal;
+}
+
+#right-hand {
+  position: absolute;
+  color: #4e4e4e;
+  opacity: 0.1;
+  scale: 1;
+  left: 40%;
+  top: -100%;
+  -webkit-animation: breathing 8s ease-out infinite normal;
+  animation: breathing 8s ease-out infinite normal;
+}
+
+
+
+@-webkit-keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
 }

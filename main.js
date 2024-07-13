@@ -69,23 +69,21 @@ function simulateLoading(duration) {
   requestAnimationFrame(step);
 }
 
-function showEndButton() {
-  setTimeout(function() {
-    document.querySelector('.').style.opacity = 1;
-  }, 6000); // 8000 milliseconds = 8 seconds
-}
-
 function showCutscene() {
   setTimeout(function() {
     document.querySelector('.second').style.opacity = 1;
-  }, 4000);
+  }, 3000);
   setTimeout(function() {
     document.querySelector('.third').style.opacity = 1;
-  }, 8000);
+  }, 6000);
   setTimeout(function() {
     document.querySelector('.fourth').style.opacity = 1;
-  }, 14000);
+  }, 10000);
   setTimeout(function() {
     document.querySelector('.cutscene-button').style.opacity = 1;
-  }, 17000);
+  }, 14000);
+}
+
+function addToInventory(key, item) {
+  localStorage.setItem(key, item);
 }

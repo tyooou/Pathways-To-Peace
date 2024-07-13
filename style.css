@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.item-list {
+    margin: 20px 0;
+}
+
+.item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.item:hover {
+    background-color: #f0f0f0;
+}
+
+#inventory {
+    border: 1px solid #000;
+    padding: 10px;
+    min-height: 50px;
+}

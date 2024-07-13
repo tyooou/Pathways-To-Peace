@@ -34,5 +34,27 @@
       <a onclick="transitionToPage('./ending.html')"><div class="animated inventory"><img src="./icons/inventory.png"/>Inventory</div></a>
       <div class="scene-count">Scene 1/4</div>
     </div>
+
+    <div class="container">
+      <div class="item">
+        <span onclick="hide(this)" class="object"> </span>
+        <span class="popup">Some text in the Popup 1..</span>
+      </div>
+      <div class="item" style="position: absolute; left: 200px;">
+        <span onclick="hide(this)" class="object"> </span>
+        <span class="popup">Some text in the Popup 2..</span>
+      </div>
+      <div class="item" style="position: absolute; left: 400px">
+        <span onclick="hide(this)" class="object"> </span>
+        <span class="popup">Some text in the Popup 3..</span>
+      </div>
+    </div>
+    
+    <script>
+      function hide(clickedElement) {
+        var item = clickedElement.closest('.item');
+        item.style.display = 'none';
+      }
+    </script>
   </body>
 </html>

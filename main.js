@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 function showEndButton() {
   setTimeout(function() {
     document.querySelector('.end-button').style.opacity = 1;
+    localStorage.clear();
   }, 6000);
 }
 
@@ -100,6 +101,7 @@ function addToChoices(key, value) {
   for (var i = 0; i < choices.length; i++) {
     choices[i].style.display = "none";
   }
+  window.location.reload();
 }
 
 function calculateResult() {
@@ -145,22 +147,42 @@ function showChoices(key) {
   let choices = document.querySelectorAll(".choice-modal");
   if (key == 1) {
     choices = document.querySelectorAll(".coins");
+    addToInventory('item1', 1);
   } else if (key == 2) {
     choices = document.querySelectorAll(".clothing");
+    addToInventory('item2', 1);
   } else if (key == 3) {
     choices = document.querySelectorAll(".mirror");
+    addToInventory('item3', 1);
   } else if (key == 4) {
     choices = document.querySelectorAll(".food");
+    addToInventory('item4', 1);
   } else if (key == 5) {
     choices = document.querySelectorAll(".wheel");
+    addToInventory('item5', 1);
   } else if (key == 6) {
     choices = document.querySelectorAll(".shoes");
+    addToInventory('item6', 1);
   } else if (key == 7) {
     choices = document.querySelectorAll(".laptop");
+    addToInventory('item7', 1);
   } else if (key == 8) {
     choices = document.querySelectorAll(".doll");
+    addToInventory('item8', 1);
   }
   for (var i = 0; i < choices.length; i++) {
     choices[i].style.display = "block";
+  }
+}
+
+function getCollected() {
+  let elements = document.querySelectorAll(".inventory-item");
+  for (let i = 0; i < elements.length; i++) {
+    let itemKey = `item${i + 1}`;
+    if (Number(localStorage.getItem(itemKey)) === 1) {
+      elements[i].style.opacity = 1;
+    } else {
+      elements[i].style.opacity = 0.1; // optional: to show that item is not collected
+    }
   }
 }

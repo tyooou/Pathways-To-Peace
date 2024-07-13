@@ -33,16 +33,17 @@
       <div onclick="showChoices(1)" class="animated">See choices</div>
       <div class="scene-count">Scene 1/4</div>
       <div class="inventory-bar">
-        <img src="./icons/inventory.png" class="inventory-item"/>
-        <img src="./icons/inventory.png" class="inventory-item"/>
-        <img src="./icons/inventory.png" class="inventory-item"/>
-        <img src="./icons/inventory.png" class="inventory-item"/>
-        <img src="./icons/inventory.png" class="inventory-item"/>
-        <img src="./icons/inventory.png" class="inventory-item"/>
-        <img src="./icons/inventory.png" class="inventory-item"/>
-        <img src="./icons/inventory.png" class="inventory-item"/>
+        <img id="coins-img" src="./coins.png" class="inventory-item"/>
+        <img id="clothing-img" src="./clothing.png" class="inventory-item"/>
+        <img id="mirror-img" src="./mirror.png" class="inventory-item"/>
+        <img id="food-img" src="./food.png" class="inventory-item"/>
+        <img id="wheel-img" src="./wheel.png" class="inventory-item"/>
+        <img id="shoes-img" src="./shoes.png" class="inventory-item"/>
+        <img id="doll-img" src="./doll.png" class="inventory-item"/>
+        <img id="laptop-img" src="./laptop.png" class="inventory-item"/>
       </div>
     </div>
+    <script>getCollected()</script>
 
     <div class="coins choice-modal">
     <div class="modal-title">
@@ -51,6 +52,14 @@
       <div onclick="addToChoices('choice1', 1)" class="animated choice-button choice-button-1">Donate it to the homeless person.</div>
       <div onclick="addToChoices('choice1', 3)" class="animated choice-button choice-button-2">Buy food and give that to the homeless person.</div>
       <div onclick="addToChoices('choice1', 5)" class="animated choice-button choice-button-3">Keep it to yourself</div>
+    </div>
+
+    <div class="clothing choice-modal">
+    <div class="modal-title">
+      You have a jacket that you don’t wear anymore. What do you do with it?
+    </div>
+      <div onclick="addToChoices('choice1', 1)" class="animated choice-button choice-button-1">Sell it to your friend</div>
+      <div onclick="addToChoices('choice1', 3)" class="animated choice-button choice-button-2">Donate the jacket to a charity.</div>
     </div>
   </div>
   </body>

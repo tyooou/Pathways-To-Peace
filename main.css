@@ -548,7 +548,7 @@ a {
 .inventory-item {
   width: 40px;
   padding: 10px;
-  filter: invert(1);
+  opacity: 0;
 }
 
 .inventory-bar {
@@ -638,5 +638,33 @@ a {
 }
 
 .coins {
+  display: none;
+}
+
+.clothing {
+  display: none;
+}
+
+.mirror {
+  display: none;
+}
+
+.food {
+  display: none;
+}
+
+.wheel {
+  display: none;
+}
+
+.shoes {
+  display: none;
+}
+
+.doll {
+  display: none;
+}
+
+.laptop {
   display: none;
 }
